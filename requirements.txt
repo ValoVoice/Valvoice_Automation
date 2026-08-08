@@ -1,0 +1,17 @@
+chatterbox-tts
+numpy
+scipy
+soundfile
+tokenizers
+conformer
+einops
+encodec
+s3tokenizer
+resemble-perth
+pyyaml
+safetensors
+huggingface_hub
+transformers
+requests
+google-genai
+python-dotenv

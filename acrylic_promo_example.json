@@ -1,0 +1,23 @@
+{
+  "title": "Why is your Chrome still on the default new tab?",
+  "output_name": "acrylic_extension_promo",
+  "spoken_hook": "Why is your Chrome still on the default new tab.",
+  "generate_voice": true,
+  "clips": [
+    {
+      "path": "raw/obs_clips/boring_default_tab.mp4",
+      "overlay_text": "Why is your Chrome still on default?",
+      "duration_seconds": 3.5
+    },
+    {
+      "path": "raw/obs_clips/acrylic_reveal_animation.mp4",
+      "overlay_text": "Meet Acrylic \u2014 the aesthetic workspace.",
+      "duration_seconds": 4.5
+    },
+    {
+      "path": "raw/obs_clips/widgets_customization.mp4",
+      "overlay_text": "Custom widgets. Zero clutter.",
+      "duration_seconds": 5.0
+    }
+  ]
+}

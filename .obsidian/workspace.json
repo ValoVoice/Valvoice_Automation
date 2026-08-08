@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "bb0703574ebdd445",
+    "type": "split",
+    "children": [
+      {
+        "id": "61919965ea96f488",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64939039ea8d47a2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0f828810699e1004",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a1670f94ab4a905",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e1e1bf49b735a508",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5b038754c4513025",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e6473db538e44466",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b4e27ba5b3992cc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "9717e7bc06886b12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "907e23ea70ed427f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Research.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Research"
+            }
+          },
+          {
+            "id": "c329e41867e6e812",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Research.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Research"
+            }
+          },
+          {
+            "id": "b37d90f579aa8199",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "233f2ac5196c7100",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "be6332ab0d25eb9b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Research.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Research"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "64939039ea8d47a2",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "artifacts/audio/test_output.wav",
+    "artifacts/output/test_blur_fit.mp4",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/RECORD",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/WHEEL",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/METADATA",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/LICENSE",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/INSTALLER",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/entry_points.txt",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info/DELVEWHEEL",
+    "venv/Lib/site-packages/pandas-3.0.5.dist-info",
+    "venv/Lib/site-packages/sklearn/externals/array_api_extra/README.md",
+    "venv/Lib/site-packages/sklearn/externals/array_api_compat/README.md",
+    "venv/Lib/site-packages/sklearn/datasets/images/flower.jpg",
+    "venv/Lib/site-packages/sklearn/datasets/images/china.jpg",
+    "venv/Lib/site-packages/sympy/plotting/tests/test_region_xor.png",
+    "venv/Lib/site-packages/sympy/plotting/tests/test_region_or.png",
+    "venv/Lib/site-packages/sympy/plotting/tests/test_region_not.png",
+    "venv/Lib/site-packages/sympy/plotting/tests/test_region_and.png",
+    "CONTENT_ROADMAP.md",
+    "AGENTS.md",
+    "venv/Lib/site-packages/httpx-0.28.1.dist-info/licenses/LICENSE.md",
+    "venv/Lib/site-packages/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+    "Research.md",
+    "songs/README.md",
+    "Implementation.md",
+    "README.md",
+    "Architecture.md",
+    "docs/Implementation.md",
+    "docs/Research.md",
+    "Clippings/AI 2027.md"
+  ]
+}

@@ -1,0 +1,32 @@
+# Environment & secrets
+.env
+client_secrets.json
+youtube_token.json
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Generated output (don't commit large video files)
+artifacts/
+songs/*.mp3
+songs/*.wav
+songs/*.m4a
+songs/*.ogg
+
+# Auto-managed state files
+format_counter.json
+used_clips.json
+state/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# SSH keys and credentials
+id_rsa
+id_ed25519
+*.pem
+*.ppk
+.ssh/

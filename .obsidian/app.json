@@ -1,0 +1,25 @@
+{
+  "attachmentFolderPath": "raw/assets",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "raw",
+  "alwaysUpdateLinks": true,
+  "useTab": false,
+  "tabSize": 2,
+  "readableLineLength": true,
+  "showFrontmatter": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "defaultViewMode": "source",
+  "userIgnoreFilters": [
+    "venv/",
+    "__pycache__/",
+    "artifacts/",
+    "audio/",
+    "raw/",
+    "state/",
+    "subtitles/",
+    "scripts/",
+    "songs/",
+    ".idea/"
+  ]
+}

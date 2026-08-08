@@ -1,0 +1,33 @@
+{
+  "title": "Acrylic UI Showcase (Photo Stand-ins)",
+  "output_name": "acrylic_photo_promo",
+  "spoken_hook": "Why is your Chrome still on the default new tab.",
+  "generate_voice": true,
+  "clips": [
+    {
+      "path": "raw/obs_clips/Showcase1_placeholder.mp4",
+      "overlay_text": "Why is your Chrome still on default?",
+      "duration_seconds": 3.5
+    },
+    {
+      "path": "raw/obs_clips/Showcase2_placeholder.mp4",
+      "overlay_text": "Quick links dock. Zero clutter.",
+      "duration_seconds": 4.0
+    },
+    {
+      "path": "raw/obs_clips/Showcase5_placeholder.mp4",
+      "overlay_text": "Built-in Pomodoro & task timer.",
+      "duration_seconds": 4.0
+    },
+    {
+      "path": "raw/obs_clips/Showcase3_placeholder.mp4",
+      "overlay_text": "Custom fonts & dynamic themes.",
+      "duration_seconds": 4.0
+    },
+    {
+      "path": "raw/obs_clips/Marquee promo tile_placeholder.mp4",
+      "overlay_text": "Get Acrylic \u2014 free on Web Store!",
+      "duration_seconds": 4.5
+    }
+  ]
+}

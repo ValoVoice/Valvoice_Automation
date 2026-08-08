@@ -1,0 +1,20 @@
+﻿Why turning it off and on actually fixes RAM
+The reason your GPU is faster than your CPU
+How SSDs hide dead sectors from your OS
+Why 0.1 + 0.2 doesn't equal 0.3 in programming
+What actually happens in the 100ms when you ping Google
+How RSA encryption relies on one math problem
+Why deleting a file doesn't actually erase it
+How quantum computers will break current passwords
+The scary reality of how hash collisions work
+Why incognito mode doesn't actually hide you
+Why LLMs struggle with basic token-based arithmetic
+How diffusion models create images from pure noise
+Why neural networks are not actually like human brains
+The hallucination problem AI researchers can't fix
+The reason 'strawberry' breaks AI's letter counting
+How the internet is held together by underwater cables
+Why we officially ran out of IP addresses
+How DNS servers act as the internet's phonebook
+The bizarre reason leap seconds crash servers
+How TCP guarantees your message actually arrives
