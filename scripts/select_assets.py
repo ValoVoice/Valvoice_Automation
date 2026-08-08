@@ -33,6 +33,13 @@ def get_random_asset(tag: str) -> str:
     selected = random.choice(files)
     return os.path.join(directory, selected)
 
+def select_bgm() -> str | None:
+    """Select a random BGM track from the approved directory."""
+    bgm_dir = os.path.join(config.PROJECT_ROOT, "assets", "bgm", "approved")
+    if not os.path.isdir(bgm_dir): return None
+    valid = [os.path.join(bgm_dir, f) for f in os.listdir(bgm_dir) if f.lower().endswith(('.mp3', '.wav', '.m4a'))]
+    return random.choice(valid) if valid else None
+
 def select_assets_for_script(script: dict) -> dict:
     """
     Takes a generated script and adds a 'selected_asset' path to each scene

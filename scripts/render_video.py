@@ -37,13 +37,6 @@ def _has_audio(path: str) -> bool:
     except:
         return False
 
-def _pick_bgm_track() -> str | None:
-    bgm_dir = os.path.join(config.PROJECT_ROOT, "assets", "bgm", "approved")
-    if not os.path.isdir(bgm_dir):
-        return None
-    valid = [os.path.join(bgm_dir, f) for f in os.listdir(bgm_dir) if f.lower().endswith((".mp3", ".wav", ".m4a"))]
-    return os.path.abspath(random.choice(valid)) if valid else None
-
 def _get_video_duration(path: str) -> float:
     import re
     try:
@@ -52,7 +45,7 @@ def _get_video_duration(path: str) -> float:
     except:
         return 4.0
 
-def render_short(scene_paths: list, scene_durations: list, audio_path: str, srt_path: str, output_path: str) -> str:
+def render_short(scene_paths: list, scene_durations: list, audio_path: str, srt_path: str, output_path: str, bgm_track: str = None) -> str:
     """
     Renders the short by mixing raw video audio (preserving XTTS demos),
     Edge-TTS narration, and BGM, followed by subtitle burn-in.
@@ -97,7 +90,6 @@ def render_short(scene_paths: list, scene_durations: list, audio_path: str, srt_
             
     _run_ffmpeg(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", concat_list, "-c", "copy", concat_out], "concat")
 
-    bgm_track = _pick_bgm_track()
     mix_out = os.path.join(temp_dir, "mix.mp4")
     
     print("    Mixing Edge-TTS, Raw Audio, and BGM...")

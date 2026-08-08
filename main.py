@@ -17,8 +17,8 @@ import config
 import settings
 
 from scripts.generate_script import generate_script
-from scripts.select_assets import select_assets_for_script
-from scripts.validate_content import validate_script_content, validate_metadata, post_render_validation
+from scripts.select_assets import select_assets_for_script, select_bgm
+from scripts.validate_content import validate_script_content, validate_metadata, validate_bgm, post_render_validation
 from scripts.generate_audio import generate_audio_for_scenes
 from scripts.render_video import render_short
 from scripts.generate_metadata import generate_platform_metadata
@@ -42,6 +42,7 @@ generation_model: {settings.SCRIPT_MODEL}
 prompt_version: v2.0
 validation_status: {validation_status}
 validation_timestamp: {timestamp}
+status: pending-review
 topic: "{topic}"
 video_path: "{video_path}"
 ---
@@ -85,8 +86,15 @@ async def run_pipeline(topic: str) -> dict:
     val_status = validate_script_content(script)
     print(f"  ✓ Script Validation Status: {val_status}")
     
-    if val_status == "FAIL":
-        raise RuntimeError("Script failed deterministic validation.")
+    bgm_track = select_bgm()
+    if bgm_track:
+        if not validate_bgm(bgm_track):
+            print(f"  [Validation FAIL] BGM track not in approved folder: {bgm_track}")
+            val_status = "FAIL"
+    
+    if val_status != "PASS":
+        md_path = write_obsidian_frontmatter(unique_id, topic, script, {}, "", val_status)
+        raise RuntimeError(f"Pre-Render Validation blocked execution (Status: {val_status}). Traceability: {md_path}")
         
     # 4. Generate Audio (Edge-TTS)
     print("\n[4/8] Generating Edge-TTS Narration...")
@@ -105,7 +113,7 @@ async def run_pipeline(topic: str) -> dict:
     scene_paths = [s["selected_asset"] for s in script["scenes"]]
     scene_durations = audio_info.get("scene_durations", [s.get("duration_seconds", 4) for s in script["scenes"]])
     
-    output_path = render_short(scene_paths, scene_durations, audio_path, srt_path, output_path)
+    output_path = render_short(scene_paths, scene_durations, audio_path, srt_path, output_path, bgm_track)
     
     # 6. Post-Render Validation
     print("\n[6/8] Post-Render Validation...")
