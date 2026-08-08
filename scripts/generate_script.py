@@ -144,10 +144,11 @@ Output ONLY valid JSON:
                     last_validation_error = validation_error
                     continue
                 raise ValueError(f"Script too long: {validation_error}")
-            break
+            script["prompt_version"] = "v2.1_valvoice_auto"
+            return script
         except json.JSONDecodeError as e:
             if attempt < 2:
                 continue
-            raise ValueError(f"Invalid JSON: {{e}}")
+            raise ValueError(f"Invalid JSON: {e}")
 
     return script

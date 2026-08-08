@@ -43,5 +43,14 @@ class TestValVoiceValidation(unittest.TestCase):
     def test_unapproved_bgm(self):
         self.assertFalse(validate_bgm(os.path.abspath("assets/bgm/unapproved_dummy.mp3")))
 
+    def test_valid_metadata(self):
+        meta = {"youtube": {"title": "ValVoice feature breakdown", "description": "Routing AI TTS to your team."}}
+        self.assertEqual(validate_metadata(json.dumps(meta)), "PASS")
+        
+    def test_problematic_metadata(self):
+        meta = {"youtube": {"title": "Get ValVoice FREE FOREVER — Riot-approved AI!"}}
+        res = validate_metadata(json.dumps(meta))
+        self.assertIn(res, ["FAIL", "HUMAN_REVIEW_REQUIRED"])
+
 if __name__ == '__main__':
     unittest.main()

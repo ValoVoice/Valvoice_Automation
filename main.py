@@ -39,7 +39,7 @@ def write_obsidian_frontmatter(job_id: str, topic: str, script: dict, metadata: 
 content_id: {job_id}
 generation_timestamp: {timestamp}
 generation_model: {settings.SCRIPT_MODEL}
-prompt_version: v2.0
+prompt_version: {script.get('prompt_version', 'v2.0')}
 validation_status: {validation_status}
 validation_timestamp: {timestamp}
 status: pending-review

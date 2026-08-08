@@ -91,12 +91,22 @@ def validate_script_content(script: dict) -> str:
     return semantic_result
 
 def validate_metadata(metadata_text: str) -> str:
-    """
-    Validates platform-specific metadata using the exact same rules.
-    """
-    if not _deterministic_validation(metadata_text):
+    try:
+        meta_dict = json.loads(metadata_text)
+        formatted = ""
+        for platform, content in meta_dict.items():
+            formatted += f"\n--- {platform.upper()} ---\n"
+            if isinstance(content, dict):
+                for k, v in content.items():
+                    formatted += f"{k}: {v}\n"
+            else:
+                formatted += str(content) + "\n"
+    except Exception:
+        formatted = metadata_text
+
+    if not _deterministic_validation(formatted):
         return "FAIL"
-    return _semantic_validation(metadata_text)
+    return _semantic_validation(formatted)
 
 def validate_bgm(bgm_path: str) -> bool:
     """
